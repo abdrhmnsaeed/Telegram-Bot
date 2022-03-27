@@ -27,15 +27,6 @@ async def welcome(message: types.Message):
     await message.reply("Hello! Am amTiredBot, How can i help you?", reply_markup=keyboard1)
 
 
-# @dp.callback_query_handler(text=["randomvalue_of10", "randomvalue_of100"])
-# async def random_value(call: types.CallbackQuery):
-#     if call.data == "randomvalue_of10":
-#         await call.message.answer(randint(1, 10))
-#     if call.data == "randomvalue_of100":
-#         await call.message.answer(randint(1, 100))
-#     await call.answer()
-
-
 @dp.message_handler()
 async def serviceSelection(message: types.Message):
     if message.text == 'AIRTIME':
